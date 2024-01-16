@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./projects/signaltest/src/**/*.{html,ts,scss}",],
+  content: ["./projects/carrello/src/**/*.{html,ts,scss}",],
   theme: {
     extend: {},
   },

@@ -30,7 +30,10 @@
               "projects/carrello/src/assets"
             ],
             "styles": [
-              "projects/carrello/src/styles.scss"
+              "projects/carrello/src/styles.scss",
+              {
+                "input": "node_modules/tailwindcss/tailwind.css"
+              }
             ],
             "scripts": []
           },
