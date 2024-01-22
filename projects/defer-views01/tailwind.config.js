@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./projects/carrello/src/**/*.{html,ts,scss}",],
+  content: ["./projects/defer-views01/src/**/*.{html,ts,scss}",],
   theme: {
     extend: {
       colors: {
@@ -12,4 +12,3 @@ module.exports = {
   },
   plugins: [require("daisyui")],
 }
-
