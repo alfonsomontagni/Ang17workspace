@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+.chessboard {
+    display: flex;
+    flex-direction: column;
+    width: 320px; /* 8 squares */
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .square {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .black-square {
+    background-color: #8f9779; /* Verde pallido per le caselle nere */
+  }
+  
+  .highlight {
+    outline: 2px solid yellow; /* Evidenzia le caselle controllate */
+  }
+  
+  .pieces-box {
+    margin-left: 20px;
+  }
+  
+  .piece {
+    cursor: grab;
+    margin-bottom: 10px;
+  }
+  
+  .piece {
+    width: 40px;  /* Larghezza della casella della scacchiera */
+    height: 40px; /* Altezza della casella della scacchiera */
+    cursor: grab; /* Cambia il cursore per indicare che l'elemento è trascinabile */
+  }
