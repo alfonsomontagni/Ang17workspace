@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <!-- Error display for firstName -->
+    <div><h1>OLD</h1></div>
+    <div>
+        <input type="text" formControlName="firstName" placeholder="First Name page"></div>
+    <div *ngIf="form.controls['firstName'].errors as errors">
+    <!-- {{ errors | json }} -->      
+        <div *ngIf="form.controls['firstName'].invalid && (form.controls['firstName'].touched || form.controls['firstName'].dirty)">
+          <small *ngIf="errors['required']">*First Name is a required field</small>
+          <small *ngIf="errors['minlength']">*First Name must be at least 5 characters</small>
+          <small *ngIf="errors['forbiddenName']">*{{ errors['forbiddenName'] }}</small>
+        </div>
+      </div>
+    
+  
+    <!-- Error display for role -->
+    <div>
+        <input type="text" formControlName="role" placeholder="Role page"></div>
+    <div *ngIf="form.controls['role'].errors as errors">
+     <!-- {{ errors | json }} -->
+
+        <div *ngIf="form.controls['role'].invalid && (form.controls['role'].touched || form.controls['role'].dirty)">
+          <small *ngIf="errors['forbiddenRole']">*{{ errors['forbiddenRole'] }}</small>
+        </div>
+      </div>
+  
+    <div><button type="submit">Submit</button></div>
+  </form>
+  

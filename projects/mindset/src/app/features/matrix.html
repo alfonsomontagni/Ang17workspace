@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="flex flex-col">
+      <label for="parametro1">Parametro 1 Migliorare:</label>
+      <select id="parametro1" formControlName="parametro1" class="border rounded p-2 mb-4">
+        <option *ngFor="let parametro of parametri" [value]="parametro.id">
+            {{ '0' + parametro.id | slice:-2 }}
+            {{ parametro.name }} - {{ parametro.nameEng }} </option>
+      </select>
+  
+      <label for="parametro2">Parametro 2 Caratteristica in peggioramento:</label>
+      <select id="parametro2" formControlName="parametro2" class="border rounded p-2 mb-4">
+        <option *ngFor="let parametro of parametri" [value]="parametro.id">
+            {{ '0' + parametro.id | slice:-2 }}
+            {{ parametro.name }} - {{ parametro.nameEng }}</option>
+      </select>
+  
+      <button type="submit" class="bg-blue-500 text-white rounded p-2">Invia</button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div *ngFor="let principio of principiSelezionati" class="border p-4 rounded-lg shadow">
+            
+          <h3 class="font-bold text-lg">{{ '0' + principio.id | slice:-2 }} {{ principio.name }}  ::::: {{principio.nameEng}}</h3>
+          <p>{{ principio.a }}</p>
+          <p *ngIf="principio.b">{{ principio.b }}</p>
+          <p *ngIf="principio.c">{{ principio.c }}</p>
+          <p *ngIf="principio.d">{{ principio.d }}</p>
+          <p *ngIf="principio.e">{{ principio.e }}</p>
+          <p class="italic">{{ principio.esempi }}</p>
+        </div>
+      </div>
+  </form>
+  

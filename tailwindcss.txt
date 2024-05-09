@@ -1,0 +1,51 @@
+
+alcuni comandi sono vetusti o non più necessari come --standalone=true in caso cambiare:
+
+creazione del workspace vuoto per inserire più progetti
+ng new Ang17workspace --create-application=false 
+salvare commit e git put github
+git flow init
+salvare commit e git put github
+
+si può mettere css , questo dipende in caso volessi utilizzare un approccio SCSS+BEM
+inserire quasi sempre --dry-run per evitare errori, poi toglierlo perché possa eseguire realm il comando!!
+ng g application defer-views01 --style=scss --routing=true -s -t --skip-tests --dry-run
+
+tailwind
+    un passaggio forse è ridondante TODO vedere se gli import in style. servono o basta angular.json
+npm install -D tailwindcss postcss autoprefixer
+    se si usa il projects andare di cd
+cd projects/defer-views01  
+e solo allora npx tailwindcss init
+creato il file tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./projects/defer-views01/src/**/*.{html,ts,scss}",],
+  theme: {
+    extend: {
+      colors: {
+        'custom-blue': '#5b6dcf',
+        'custom-red': '#ef4444',
+        'custom-green': '#23ab55'
+      },
+    },
+  },
+  plugins: [require("daisyui")],
+}
+in angular json 
+            "styles": [
+              "projects/defer-views01/src/styles.scss",
+              {
+                "input": "node_modules/tailwindcss/tailwind.css"
+              }
+            ],
+            "scripts": []
+
+in style.scss ma NON SERVE se  "input": "node_modules/tailwindcss/tailwind.css"
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+per il lazy loading mettere export default
+dopo creata la navbar importare Routerlink se no non funzione il reidirizzamento
+ng s --project=defer-views01  --o
