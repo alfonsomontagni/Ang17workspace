@@ -1,0 +1,16 @@
+<div class="square"
+     [ngClass]="{'white': square.row % 2 === square.col %2,
+  'black': square.row % 2 !== square.col % 2}"
+  cdkDropList
+  [cdkDropListData]="square"
+  (cdkDropListDropped)="onDrop($event)"
+  (cdkDropListEntered)="enteredDrop($event)"
+  (cdkDropListExited)="exitedDrop($event)"
+  (cdkDropListSorted)="sortedDrop($event)"
+  >
+  <img *ngIf="square.piece"
+       class="piece"
+       src="{{square.piece.img()}}"
+       cdkDrag
+       cdkDragBoundary=".board"/>
+</div> 

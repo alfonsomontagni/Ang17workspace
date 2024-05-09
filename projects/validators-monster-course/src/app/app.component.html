@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  == {{form.controls.firstName.errors | json}} ==
+  <div>
+    <input type="text" formControlName="firstName" placeholder="First Name">
+    @if(form.controls.firstName.invalid 
+    && (form.controls.firstName.touched || form.controls.firstName.dirty) 
+    ){
+      @if (form.controls.firstName.errors?.["required"]){
+        <small>*First Name is a required field</small>
+      }
+      @if (form.controls.firstName.errors?.["minlength"]){
+        <small>*First Name must be at least 5 characters </small>
+      }
+      @if (form.controls.firstName.errors?.["forbiddenName"]){
+        <small>*{{form.controls.firstName.errors?.["forbiddenName"]}} </small>
+      }
+    }
+  </div>
+  <div>
+    <input type="text" formControlName="role" placeholder="Role">
+  </div>
+  <div><button type="submit">Submit</button></div>
+</form>
+
+<br />
+<app-validator001></app-validator001>
+<br />
+<app-old-validator001></app-old-validator001>

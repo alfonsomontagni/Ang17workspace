@@ -623,6 +623,370 @@
           }
         }
       }
+    },
+    "chess01": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/chess01",
+      "sourceRoot": "projects/chess01/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/chess01",
+            "index": "projects/chess01/src/index.html",
+            "browser": "projects/chess01/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/chess01/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/chess01/src/favicon.ico",
+              "projects/chess01/src/assets"
+            ],
+            "styles": [
+              "projects/chess01/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "chess01:build:production"
+            },
+            "development": {
+              "buildTarget": "chess01:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "chess01:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/chess01/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/chess01/src/favicon.ico",
+              "projects/chess01/src/assets"
+            ],
+            "styles": [
+              "projects/chess01/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "cook2editch1": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/cook2editch1",
+      "sourceRoot": "projects/cook2editch1/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/cook2editch1",
+            "index": "projects/cook2editch1/src/index.html",
+            "browser": "projects/cook2editch1/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/cook2editch1/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/cook2editch1/src/favicon.ico",
+              "projects/cook2editch1/src/assets"
+            ],
+            "styles": [
+              "projects/cook2editch1/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "cook2editch1:build:production"
+            },
+            "development": {
+              "buildTarget": "cook2editch1:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "cook2editch1:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/cook2editch1/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/cook2editch1/src/favicon.ico",
+              "projects/cook2editch1/src/assets"
+            ],
+            "styles": [
+              "projects/cook2editch1/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "rxjs-monster-course": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/rxjs-monster-course",
+      "sourceRoot": "projects/rxjs-monster-course/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/rxjs-monster-course",
+            "index": "projects/rxjs-monster-course/src/index.html",
+            "browser": "projects/rxjs-monster-course/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/rxjs-monster-course/tsconfig.app.json",
+            "assets": [
+              "projects/rxjs-monster-course/src/favicon.ico",
+              "projects/rxjs-monster-course/src/assets"
+            ],
+            "styles": [
+              "projects/rxjs-monster-course/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "rxjs-monster-course:build:production"
+            },
+            "development": {
+              "buildTarget": "rxjs-monster-course:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "rxjs-monster-course:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/rxjs-monster-course/tsconfig.spec.json",
+            "assets": [
+              "projects/rxjs-monster-course/src/favicon.ico",
+              "projects/rxjs-monster-course/src/assets"
+            ],
+            "styles": [
+              "projects/rxjs-monster-course/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "validators-monster-course": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/validators-monster-course",
+      "sourceRoot": "projects/validators-monster-course/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/validators-monster-course",
+            "index": "projects/validators-monster-course/src/index.html",
+            "browser": "projects/validators-monster-course/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/validators-monster-course/tsconfig.app.json",
+            "assets": [
+              "projects/validators-monster-course/src/favicon.ico",
+              "projects/validators-monster-course/src/assets"
+            ],
+            "styles": [
+              "projects/validators-monster-course/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "validators-monster-course:build:production"
+            },
+            "development": {
+              "buildTarget": "validators-monster-course:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "validators-monster-course:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/validators-monster-course/tsconfig.spec.json",
+            "assets": [
+              "projects/validators-monster-course/src/favicon.ico",
+              "projects/validators-monster-course/src/assets"
+            ],
+            "styles": [
+              "projects/validators-monster-course/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
