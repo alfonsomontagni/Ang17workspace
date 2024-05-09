@@ -4,11 +4,13 @@ import { AbstractControl, NonNullableFormBuilder, ReactiveFormsModule, Validatio
 import { RouterOutlet } from '@angular/router';
 import { Validator001Component } from './components/validator001/validator001.component';
 import { OldValidator001Component } from './components/old-validator001/old-validator001.component';
+import { OldValidator002Component } from './components/old-validator002/old-validator002.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ReactiveFormsModule,CommonModule,Validator001Component,OldValidator001Component],
+  imports: [RouterOutlet,ReactiveFormsModule,
+    CommonModule,Validator001Component,OldValidator001Component,OldValidator002Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

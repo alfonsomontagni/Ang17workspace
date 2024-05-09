@@ -16,9 +16,12 @@
     <!-- Error display for role -->
     <div>
         <input type="text" formControlName="role" placeholder="Role page"></div>
+        <div *ngIf="isLoading && form.controls['role'].pending" class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
     <div *ngIf="form.controls['role'].errors as errors">
-     <!-- {{ errors | json }} -->
-
+       {{ errors | json }} 
+     
         <div *ngIf="form.controls['role'].invalid && (form.controls['role'].touched || form.controls['role'].dirty)">
           <small *ngIf="errors['forbiddenRole']">*{{ errors['forbiddenRole'] }}</small>
         </div>
