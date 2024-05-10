@@ -5,16 +5,25 @@ import { RouterOutlet } from '@angular/router';
 import { Validator001Component } from './components/validator001/validator001.component';
 import { OldValidator001Component } from './components/old-validator001/old-validator001.component';
 import { OldValidator002Component } from './components/old-validator002/old-validator002.component';
+import { HotTableModule } from '@handsontable/angular';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,ReactiveFormsModule,
-    CommonModule,Validator001Component,OldValidator001Component,OldValidator002Component],
+    CommonModule,
+    Validator001Component,
+    OldValidator001Component,
+    OldValidator002Component,
+    HotTableModule,
+    
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
+  
   //title = 'validators-monster-course';
   fb = inject(NonNullableFormBuilder);
   form = this.fb.group({
