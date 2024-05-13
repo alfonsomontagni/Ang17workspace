@@ -17,7 +17,7 @@ export class AdvanceHandsontableComponent {
   @ViewChild("self") self!: ElementRef;
 
 
-  instanceIbm!: string;
+  instanceIbm: string = "instance";
   constructor(
     protected hotRegisterer: HotTableRegisterer,
     protected typeOfErr: TypeOfErrorService,
