@@ -28,6 +28,7 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -41,3 +42,5 @@ testem.log
 .DS_Store
 Thumbs.db
 /r.txt
+/video_correlati.txt
+allvideo/

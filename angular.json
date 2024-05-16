@@ -1081,6 +1081,188 @@
           }
         }
       }
+    },
+    "errors": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/errors",
+      "sourceRoot": "projects/errors/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/errors",
+            "index": "projects/errors/src/index.html",
+            "browser": "projects/errors/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/errors/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/errors/src/favicon.ico",
+              "projects/errors/src/assets"
+            ],
+            "styles": [
+              "projects/errors/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "errors:build:production"
+            },
+            "development": {
+              "buildTarget": "errors:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "errors:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/errors/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/errors/src/favicon.ico",
+              "projects/errors/src/assets"
+            ],
+            "styles": [
+              "projects/errors/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "calendar": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/calendar",
+      "sourceRoot": "projects/calendar/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/calendar",
+            "index": "projects/calendar/src/index.html",
+            "browser": "projects/calendar/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/calendar/tsconfig.app.json",
+            "assets": [
+              "projects/calendar/src/favicon.ico",
+              "projects/calendar/src/assets"
+            ],
+            "styles": [
+              "projects/calendar/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "calendar:build:production"
+            },
+            "development": {
+              "buildTarget": "calendar:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "calendar:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/calendar/tsconfig.spec.json",
+            "assets": [
+              "projects/calendar/src/favicon.ico",
+              "projects/calendar/src/assets"
+            ],
+            "styles": [
+              "projects/calendar/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
