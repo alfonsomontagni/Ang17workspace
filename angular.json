@@ -1263,6 +1263,300 @@
           }
         }
       }
+    },
+    "fb-ex001": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "inlineStyle": true,
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/fb-ex001",
+      "sourceRoot": "projects/fb-ex001/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/fb-ex001",
+            "index": "projects/fb-ex001/src/index.html",
+            "browser": "projects/fb-ex001/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/fb-ex001/tsconfig.app.json",
+            "assets": [
+              "projects/fb-ex001/src/favicon.ico",
+              "projects/fb-ex001/src/assets"
+            ],
+            "styles": [
+              "projects/fb-ex001/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "fb-ex001:build:production"
+            },
+            "development": {
+              "buildTarget": "fb-ex001:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "fb-ex001:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/fb-ex001/tsconfig.spec.json",
+            "assets": [
+              "projects/fb-ex001/src/favicon.ico",
+              "projects/fb-ex001/src/assets"
+            ],
+            "styles": [
+              "projects/fb-ex001/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "monster-ang-quiz-signals": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/monster-ang-quiz-signals",
+      "sourceRoot": "projects/monster-ang-quiz-signals/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/monster-ang-quiz-signals",
+            "index": "projects/monster-ang-quiz-signals/src/index.html",
+            "browser": "projects/monster-ang-quiz-signals/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/monster-ang-quiz-signals/tsconfig.app.json",
+            "assets": [
+              "projects/monster-ang-quiz-signals/src/favicon.ico",
+              "projects/monster-ang-quiz-signals/src/assets"
+            ],
+            "styles": [
+              "projects/monster-ang-quiz-signals/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "monster-ang-quiz-signals:build:production"
+            },
+            "development": {
+              "buildTarget": "monster-ang-quiz-signals:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "monster-ang-quiz-signals:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/monster-ang-quiz-signals/tsconfig.spec.json",
+            "assets": [
+              "projects/monster-ang-quiz-signals/src/favicon.ico",
+              "projects/monster-ang-quiz-signals/src/assets"
+            ],
+            "styles": [
+              "projects/monster-ang-quiz-signals/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "triz": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/triz",
+      "sourceRoot": "projects/triz/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/triz",
+            "index": "projects/triz/src/index.html",
+            "browser": "projects/triz/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/triz/tsconfig.app.json",
+            "assets": [
+              "projects/triz/src/favicon.ico",
+              "projects/triz/src/assets"
+            ],
+            "styles": [
+              "projects/triz/src/styles.css",
+              {
+                "input": "node_modules/tailwindcss/tailwind.css"
+              }
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "triz:build:production"
+            },
+            "development": {
+              "buildTarget": "triz:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "triz:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/triz/tsconfig.spec.json",
+            "assets": [
+              "projects/triz/src/favicon.ico",
+              "projects/triz/src/assets"
+            ],
+            "styles": [
+              "projects/triz/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
