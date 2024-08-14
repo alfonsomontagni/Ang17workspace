@@ -1,0 +1,23 @@
+<div class="quiz">
+    <div>
+      <div class="score">Question 1/10</div>
+      <quiz-question />
+      <div class="next-button">Next question</div>
+    </div>
+  </div>
+  {{ fooo }}
+  <br>
+  questo è signal  {{ foo2() }}
+<br>
+{{quizService.getProva()}}
+<br>
+<div>message 1  {{message_02}}</div>
+<br>
+
+<div>message 2 {{message_02}}</div>
+<br>
+<div>messageSignal {{foo2()}}</div>
+<br>
+<button (click)="setFooo()">Change message</button>
+<br>
+<button (click)="setFoSignal()">Change message è signal</button>
